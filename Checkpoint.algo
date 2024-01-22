@@ -1,0 +1,28 @@
+ALGORITHM checkpoint
+VAR
+    a : CHAR;
+    conteur,voyel :INTEGER :=0;
+    mot : INTEGER := 1;
+BEGIN
+    REPEAT
+        Write("donnez un carractere");
+        Read(a);
+
+        conteur := conteur +1;
+
+        IF (a = 'a' OR a ='e' OR a ='i' OR a='o'OR a='u' OR a= 'y') THEN
+            voyel=voyel +1 ;
+        END_IF
+
+        IF (a = ' ') THEN
+            mot := mot + 1;
+        END_IF
+
+    UNTIL (a= '.')
+
+    Write("le nombre de carractere est" ,conteur);
+    Write("le nombre de voyel est" ,voyel )
+    Write("le nombre de mot est" ,mot )
+
+  
+END
